@@ -41,4 +41,87 @@ b, strong
 	font-weight: bold
 
 
+
+.todo-list
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.todo-list-item
+	flex-basis: 180px
+	width: 35%
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	text-align: center
+	box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15)
+
+.todo-list__h
+	font-size: 23px
+	text-decoration: underline
+	color: $accent
+	margin-bottom: 3%
+
+.todo-list-item__title
+	font-size: 17px
+	margin-bottom: 0
+
+.todo-list-item__task
+	margin-top: 0
+	padding: 5% 10%
+	font-size: 15px
+	margin-bottom: 0
+	padding-bottom: 0
+
+.create-task
+	display: flex
+	flex-direction: column
+	text-align: center
+	justify-content: center
+	align-items: center
+
+.create-task
+	margin: 3% 0
+
+
+input[placeholder], textarea[placeholder]
+	font-size: 14px
+
+
+.create-task__item
+	width: 400px
+	margin: 2.5% 0
+	border: 1px solid #ececec
+	padding: 4% 8%
+
+
+.create-task__create
+	margin-top: 5%
+	background-color: $accent
+	color: #fff
+	flex-basis: 25px
+	align-self: center
+	font-size: 15px
+	padding: 2.5% 8%
+	&:hover
+		background-color: #ffdb49
+
+.todo-list-item-checkbox
+	align-self: flex-end
+	margin: 5%
+	font-size: 12px 
+	
+.todo-list-item-checkbox__text
+	text-decoration: underline
+	
+.todo-list-item-checkbox__check
+	vertical-align: middle
+	height: 15px
+	width: 15px
+
+.create-task__h
+	font-size: 20px
+	margin-bottom: 1%
+
 @import "media" // Always at the end
