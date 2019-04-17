@@ -33,34 +33,35 @@
     <div class="todo-list">
         <h1 class="todo-list__h">Список того что нужно сделать</h1>
 
-
-        <div class="todo-list-item">
-            <h2 class="todo-list-item__title">Подзаголовок задачи</h2>
-            <p class="todo-list-item__task">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci
-                asperiores corporis distinctio
-                earum eligendi esse, exercitationem facilis ipsa natus nostrum perferendis porro quaerat quo quos
-                ratione, repellat, rerum ut!</p>
-
-            <div class="todo-list-item-checkbox">
-                <label class="todo-list-item-checkbox__text" for="">Выполнить:</label>
-                <input class="todo-list-item-checkbox__check" type="checkbox" name="check-task">
-            </div>
-
-        </div>
+        <div class="todo-list__all-tack-checked">Все задачи выполнены!</div>
 
 
         <form action="#" id="create-task" class="create-task">
             <h2 class="create-task__h">Создать задачу</h2>
-            <input class="create-task__item" type="text" name="task" placeholder="Название задачи">
+            <input id="task-name" class="create-task__item" type="text" name="task" placeholder="Название задачи">
 
-            <textarea class="create-task__item" name="" id="" cols="15" rows="5"
+            <textarea class="create-task__item" name="" id="task-text" cols="15" rows="5"
                       placeholder="Текст задачи"></textarea>
 
-            <button class="create-task__create">Добавить задачу</button>
+            <div class="create-task__empty-field">Поля должны быть заполены!</div>
+            <button type="button" id="add-task" class="create-task__create">Добавить задачу</button>
         </form>
     </div>
 
 </main>
+
+<template id="task">
+    <div class="todo-list-item">
+        <h2 class="todo-list-item__title"></h2>
+        <p class="todo-list-item__task"></p>
+
+        <div class="todo-list-item-checkbox">
+            <label class="todo-list-item-checkbox__text" for="">Выполнить:</label>
+            <input class="todo-list-item-checkbox__check" type="checkbox" name="check-task">
+        </div>
+
+    </div>
+</template>
 
 <script src="js/common.js"></script>
 </body>
