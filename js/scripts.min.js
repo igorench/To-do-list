@@ -51,6 +51,7 @@ function createNewTask() {
         // Переносим информацию из формы в таск
         taskTemplate.querySelector('.todo-list-item__title').textContent = taskTitle.value;
         taskTemplate.querySelector('.todo-list-item__task').textContent = taskText.value;
+        taskTemplate.querySelector('.todo-list-item__create-date').textContent += new Date().toLocaleString("ru");
 
         // Обнуляем значение полей
         taskTitle.value = "";
