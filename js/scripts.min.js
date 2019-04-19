@@ -28,6 +28,16 @@ addTask.addEventListener('click', (event) => {
     // Предотвращаем перезагрузку страницы
     event.preventDefault();
 
+    createNewTask();
+});
+
+document.addEventListener('keydown', event => {
+   if (event.code === "Enter") {
+       createNewTask();
+   }
+});
+
+function createNewTask() {
     // клонируем шаблон
     let taskTemplate = toDoTask.cloneNode(true);
 
@@ -56,17 +66,18 @@ addTask.addEventListener('click', (event) => {
     } else {
         messageEmptyTask.classList.add('create-task__empty-field_active');
     }
-
-});
+}
 
 // Функция для удаления задачи
 function checked(template) {
-    let checkbox = template.querySelector('.todo-list-item-checkbox__check');
+    let doTask = template.querySelector('.todo-list-item-checkbox');
 
-    checkbox.addEventListener('change', () => {
+    doTask.addEventListener('click', () => {
         template.remove();
         printAllTaskChecked();
     });
+
+
 }
 
 function printAllTaskChecked() {
@@ -79,3 +90,5 @@ function printAllTaskChecked() {
         console.log("Задач нет!");
     }
 }
+
+
